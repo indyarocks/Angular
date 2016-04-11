@@ -1,0 +1,18 @@
+<br class="container">
+    <input type="text" data-ng-model="userName"/> {{ userName }}
+    Existing Customers:
+    <ul>
+        <li data-ng-repeat="cust in customers | filter:userName | orderBy:'city' ">
+            {{ cust.name | uppercase }} - {{ cust.city | uppercase }}
+        </li>
+    </ul>
+    <br/>
+    Customer Name: <br/>
+    <input type="text" data-ng-model="newCustomer.name"/>
+    Customer City: <br/>
+    <input type="text" data-ng-model="newCustomer.city"/>
+    <button href="#" data-ng-click="addCustomer()">
+        Add Customer
+    </button>
+    <a href="contact.html"> Contact Page</a>
+</div>
